@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Hello from "./components/Hello";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <Hello />
-    </div>
+    <h1>
+      welcome to nextjs 13.4 with turbopack!
+    </h1>
   );
 }
