@@ -12,6 +12,7 @@
     "@types/mongodb": "^4.0.7",
     "babel-plugin-react-compiler": "^1.0.0",
     "class-variance-authority": "^0.7.1",
+    "cloudinary": "^2.8.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.555.0",
     "mongodb": "^7.0.0",
