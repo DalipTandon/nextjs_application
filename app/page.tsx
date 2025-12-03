@@ -10,7 +10,7 @@ export default async function Page() {
   return (
     <section>
     <h1 className="text-center">
-    The Hub for every Developer <br/> Event Worldwide that you can't miss!
+    The Hub for every Developer  <br/> Event Worldwide that you can't miss!
     </h1>
     <p className="text-center mt-5">Hackathons,Meetups,Conference. All at one Place</p>
     <ExploreBtn />
