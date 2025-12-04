@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { BookEvent } from "@/components/BookEvent";
 
 const EventDetailItem = ({
   icon,
@@ -41,6 +42,7 @@ const EventDetailsPage = async ({ params }: { params: Promise<{ slug: string }> 
     if (!description) {
         return notFound();
     }
+    const booking=10;
     return (
         <section id="event">
             <div className="header">
@@ -71,7 +73,18 @@ const EventDetailsPage = async ({ params }: { params: Promise<{ slug: string }> 
                     <EventTags tags={tags}/>
                 </div>
                 <aside className="booking">
-                    <p className="text-lg font-semibold">Book Event</p>
+                <div className="signup-card">
+                    <h2>Register for this event</h2>
+                {booking>0?(
+                    <>
+                    <p className="text-sm">Join {booking} people who have already booked their spot!</p>
+
+                    </>
+                ):(
+                    <p className="text-sm">Be the first to book your spot!</p>
+                )}
+                <BookEvent/>
+                </div>
                 </aside>
             </div>
         </section>
