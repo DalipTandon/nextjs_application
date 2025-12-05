@@ -4,12 +4,16 @@ import Image from "next/image";
 import events from "@/lib/constants";
 import { IEvent } from "@/database";
 import { cacheLife } from "next/cache";
-const BASE_URL=process.env.NEXT_PUBLIC_BASE_URL;
+// const BASE_URL=process.env.NEXT_PUBLIC_BASE_URL;
 export default async function Page() {
   "use cache"
   cacheLife('hours');
-  const response=await fetch(`/api/events`, { cache: "force-cache" });
-  const {events}=await response.json();
+const BASE_URL =
+    process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+  const response = await fetch(`${BASE_URL}/api/events`, {
+    cache: "force-cache",
+  });  const {events}=await response.json();
   return (
     <section>
     <h1 className="text-center">
